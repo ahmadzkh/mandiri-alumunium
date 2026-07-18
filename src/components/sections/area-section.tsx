@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { siteConfig } from "@/data/site-config"
 import { serviceAreas } from "@/data/areas"
+
 
 export function AreaSection() {
   return (

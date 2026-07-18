@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { services } from "@/data/services"
 import { siteConfig } from "@/data/site-config"
-import { serviceAreas } from "@/data/areas"
 
 export function HeroSection() {
   return (

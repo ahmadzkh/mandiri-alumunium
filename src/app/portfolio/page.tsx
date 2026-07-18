@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import Image from "next/image"
 import { siteConfig } from "@/data/site-config"
 import { portfolioItems } from "@/data/portfolio"
 import { Button } from "@/components/ui/button"
@@ -40,18 +41,43 @@ export default function PortfolioPage() {
             )}
           </div>
         ) : (
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {portfolioItems.map((item) => (
-              <div key={item.slug} className="overflow-hidden rounded-xl border bg-card">
-                <div className="aspect-[4/3] bg-muted" />
-                <div className="p-4">
-                  <p className="text-sm font-medium">{item.title}</p>
-                  {item.location && (
-                    <p className="text-xs text-muted-foreground">{item.location}</p>
-                  )}
+              <section key={item.slug} id={item.slug} className="scroll-mt-20">
+                <div className="overflow-hidden rounded-xl border bg-card card-hover">
+                  <div className="aspect-[4/3] overflow-hidden bg-muted">
+                    {item.images[0] && (
+                      <Image
+                        src={item.images[0]}
+                        alt={item.alt}
+                        width={600}
+                        height={450}
+                        className="h-full w-full object-cover"
+                      />
+                    )}
+                  </div>
+                  <div className="p-4">
+                    <h2 className="text-base font-semibold">{item.title}</h2>
+                    {item.location && (
+                      <p className="mt-1 text-xs text-muted-foreground">{item.category} &middot; {item.location}</p>
+                    )}
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                  </div>
                 </div>
-              </div>
+              </section>
             ))}
+          </div>
+        )}
+
+        {portfolioItems.length > 0 && siteConfig.contact.whatsapp && (
+          <div className="mt-12 text-center">
+            <a
+              href={`https://wa.me/${siteConfig.contact.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" className="btn-hover">Konsultasi via WhatsApp</Button>
+            </a>
           </div>
         )}
       </div>

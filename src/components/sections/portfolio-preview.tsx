@@ -1,8 +1,12 @@
+import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/site-config"
+import { portfolioItems } from "@/data/portfolio"
 
 export function PortfolioPreview() {
+  const items = portfolioItems.slice(0, 3)
+
   return (
     <section className="border-t py-16 md:py-20">
       <div className="mx-auto max-w-6xl px-5 md:px-8">
@@ -13,27 +17,49 @@ export function PortfolioPreview() {
           </p>
         </div>
 
-        <div className="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-muted-foreground/30 px-6 py-16 text-center">
-          <p className="text-sm text-muted-foreground">
-            Portfolio foto asli akan ditambahkan setelah dokumentasi proyek tersedia.
-          </p>
-          <Link href="/portfolio" className="mt-4">
-            <Button variant="outline" className="btn-hover">Lihat Portfolio</Button>
-          </Link>
-        </div>
+        {items.length === 0 ? (
+          <div className="flex flex-col items-center justify-center rounded-xl border-2 border-dashed border-muted-foreground/30 px-6 py-16 text-center">
+            <p className="text-sm text-muted-foreground">
+              Portfolio foto asli akan ditambahkan setelah dokumentasi proyek tersedia.
+            </p>
+            <Link href="/portfolio" className="mt-4">
+              <Button variant="outline" className="btn-hover">Lihat Portfolio</Button>
+            </Link>
+          </div>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {items.map((item) => (
+              <Link
+                key={item.slug}
+                href={`/portfolio#${item.slug}`}
+                className="group overflow-hidden rounded-xl border bg-card card-hover"
+              >
+                <div className="aspect-[4/3] overflow-hidden bg-muted">
+                  {item.images[0] && (
+                    <Image
+                      src={item.images[0]}
+                      alt={item.alt}
+                      width={600}
+                      height={450}
+                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                    />
+                  )}
+                </div>
+                <div className="p-4">
+                  <p className="text-sm font-medium">{item.title}</p>
+                  {item.location && (
+                    <p className="mt-1 text-xs text-muted-foreground">{item.location}</p>
+                  )}
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
 
         <div className="mt-8 text-center">
-          {siteConfig.contact.whatsapp ? (
-            <a
-              href={`https://wa.me/${siteConfig.contact.whatsapp}`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <Button className="btn-hover">Konsultasi via WhatsApp</Button>
-            </a>
-          ) : (
-            <Link href="/kontak">
-              <Button>Hubungi Kami</Button>
+          {items.length > 0 && (
+            <Link href="/portfolio">
+              <Button variant="outline" className="btn-hover">Lihat Semua Portfolio</Button>
             </Link>
           )}
         </div>

@@ -1,0 +1,39 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Mandiri Alumunium",
+  "founder": "Eko Sabari",
+  "foundingDate": "2015",
+  "description": "Jasa fabrikasi, pemasangan, dan service aluminium untuk rumah, toko, kantor, dan proyek di Bekasi, Jakarta, dan JABODETABEK.",
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Bekasi"
+    },
+    {
+      "@type": "City",
+      "name": "Jakarta"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "JABODETABEK"
+    }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Layanan Aluminium",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fabrikasi Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pemasangan Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Service Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pintu Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Jendela Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kusen Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Kitchen Set Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Partisi Aluminium" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Shower Screen" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Aluminium" } }
+    ]
+  },
+  "url": "https://mandiri-alumunium.vercel.app"
+}

@@ -38,6 +38,9 @@ export const metadata: Metadata = {
   },
   description: siteConfig.seo.defaultDescription,
   metadataBase: new URL(siteConfig.seo.siteUrl),
+  icons: {
+    icon: "/images/logo/mandiri-aluminium-profile.png",
+  },
   openGraph: {
     type: "website",
     locale: "id_ID",

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
@@ -28,7 +29,14 @@ export function Header() {
   return (
     <header role="banner" className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
-        <Link href="/" className="nav-link font-heading text-lg font-semibold tracking-tight">
+        <Link href="/" className="flex items-center gap-2 nav-link font-heading text-lg font-semibold tracking-tight">
+          <Image
+            src="/images/logo/mandiri-aluminium-ori.png"
+            alt="Mandiri Alumunium"
+            width={32}
+            height={32}
+            className="h-8 w-auto"
+          />
           Mandiri<span className="text-primary">Alumunium</span>
         </Link>
 

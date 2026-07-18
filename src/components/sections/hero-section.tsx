@@ -1,23 +1,46 @@
+"use client"
+
 import Link from "next/link"
+import { motion } from "motion/react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/site-config"
+import { AnimatedTitle } from "@/components/ui/animated-title"
 
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden border-b">
       <div className="mx-auto max-w-6xl px-5 py-20 md:py-28 md:px-8">
         <div className="max-w-2xl">
-          <p className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+          <motion.p
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
+            className="mb-2 text-xs font-semibold uppercase tracking-widest text-muted-foreground"
+          >
             Bekasi &middot; Jakarta &middot; {siteConfig.serviceArea}
-          </p>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]">
-            Fabrikasi &amp; Pemasangan{" "}
-            <span className="text-primary">Aluminium</span>
-          </h1>
-          <p className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg">
+          </motion.p>
+
+          <AnimatedTitle
+            text="Fabrikasi & Pemasangan Aluminium"
+            highlight="Aluminium"
+            className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]"
+          />
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
+            className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg"
+          >
             Jasa aluminium untuk rumah, toko, kantor, dan proyek. Pengalaman owner 15+ tahun sejak 2015. Area Bekasi, Jakarta, dan JABODETABEK.
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
+          </motion.p>
+
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4, delay: 0.9, ease: "easeOut" }}
+            className="mt-8 flex flex-wrap gap-3"
+          >
             {siteConfig.contact.whatsapp ? (
               <a
                 href={`https://wa.me/${siteConfig.contact.whatsapp}`}
@@ -36,7 +59,7 @@ export function HeroSection() {
                 Lihat Portfolio
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -5,7 +5,7 @@ import { serviceAreas } from "@/data/areas"
 
 export function Footer() {
   return (
-    <footer className="border-t bg-card">
+    <footer className="border-t bg-card" role="contentinfo">
       <div className="mx-auto max-w-6xl px-5 py-12 md:py-16 md:px-8">
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}

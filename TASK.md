@@ -131,11 +131,11 @@ Default status: Pending until implementation begins and verification passes
 
 | ID | Objective | Dependencies | Deliverables | Acceptance Criteria | Estimated Complexity | Priority | Status | Verification |
 |---|---|---|---|---|---|---|---|---|
-| CP-050 | Configure Playwright smoke tests | CP-004, CP-027 | Smoke tests for key routes | Tests cover homepage, services, portfolio, area, contact | M | P0 | Pending | `npm run test:e2e` |
-| CP-051 | Add CTA behavior tests | CP-024, CP-050 | Tests for WhatsApp/Maps link behavior | CTA hrefs are valid when official data exists; missing data state is safe | M | P0 | Pending | Playwright test run |
-| CP-052 | Add SEO asset tests | CP-035 through CP-039, CP-050 | Tests for metadata/sitemap/robots presence | Critical SEO assets exist and include expected routes | M | P0 | Pending | Playwright or node-based test run |
+| CP-050 | Configure Playwright smoke tests | CP-004, CP-027 | Smoke tests for key routes | Tests cover homepage, services, portfolio, area, contact | M | P0 | Completed | `npm run test:e2e` |
+| CP-051 | Add CTA behavior tests | CP-024, CP-050 | Tests for WhatsApp/Maps link behavior | CTA hrefs are valid when official data exists; missing data state is safe | M | P0 | Completed | Playwright test run |
+| CP-052 | Add SEO asset tests | CP-035 through CP-039, CP-050 | Tests for metadata/sitemap/robots presence | Critical SEO assets exist and include expected routes | M | P0 | Completed | Playwright or node-based test run |
 | CP-053 | Add visual smoke review | CP-027 through CP-033 | Screenshot or manual visual checklist | Major layout regressions caught across mobile/desktop | M | P1 | Pending | Visual screenshots/manual QA |
-| CP-054 | Final quality gate | CP-045, CP-046, CP-047, CP-048, CP-050, CP-051, CP-052 | Consolidated verification report | Lint, typecheck, build, tests, Lighthouse, route smoke pass | L | P0 | Pending | Full command/report output |
+| CP-054 | Final quality gate | CP-045, CP-046, CP-047, CP-048, CP-050, CP-051, CP-052 | Consolidated verification report | Lint, typecheck, build, tests, Lighthouse, route smoke pass | L | P0 | Completed | Full command/report output |
 
 ## 10. Deployment
 

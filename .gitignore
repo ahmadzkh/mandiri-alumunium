@@ -37,3 +37,6 @@ Thumbs.db
 # local assets that may contain private raw material
 raw/
 local/
+
+# hermes temp
+.hermes-tmp*/

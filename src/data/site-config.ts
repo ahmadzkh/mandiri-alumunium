@@ -24,7 +24,7 @@ export const siteConfig: SiteConfig = {
     defaultTitle: "Mandiri Alumunium | Fabrikasi & Pemasangan Aluminium Bekasi Jakarta",
     titleTemplate: "%s | Mandiri Alumunium",
     defaultDescription:
-      "Mandiri Alumunium — jasa fabrikasi, pemasangan, dan service aluminium untuk rumah, toko, kantor, dan proyek. Pengalaman 15+ tahun. Area Bekasi, Jakarta, JABODETABEK.",
+      "Mandiri Alumunium, jasa fabrikasi, pemasangan, dan service aluminium untuk rumah, toko, kantor, dan proyek. Pengalaman 15+ tahun. Area Bekasi, Jakarta, JABODETABEK.",
     siteUrl: "https://mandiri-alumunium.vercel.app",
   },
 }

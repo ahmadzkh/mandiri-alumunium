@@ -35,5 +35,10 @@
       { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom Aluminium" } }
     ]
   },
-  "url": "https://mandiri-alumunium.vercel.app"
+  "url": "https://mandiri-alumunium.vercel.app",
+  "telephone": "+6285311127515",
+  "hasMap": "https://maps.app.goo.gl/akqgUB31zAvinnDC8",
+  "sameAs": [
+    "https://wa.me/6285311127515"
+  ]
 }

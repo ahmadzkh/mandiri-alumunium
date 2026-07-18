@@ -5,6 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
 import { siteConfig } from "@/data/site-config";
+import { GoogleAnalytics } from "@/components/analytics/google-analytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -18,12 +19,16 @@ const jsonLd = {
   founder: siteConfig.business.owner,
   foundingDate: String(siteConfig.business.establishedYear),
   description: siteConfig.seo.defaultDescription,
+  telephone: "+6285311127515",
+  email: "ekomandirialumunium@gmail.com",
+  hasMap: siteConfig.contact.mapsUrl,
   areaServed: [
     { "@type": "City", name: "Bekasi" },
     { "@type": "City", name: "Jakarta" },
     { "@type": "AdministrativeArea", name: "JABODETABEK" },
   ],
   url: siteConfig.seo.siteUrl,
+  sameAs: [`https://wa.me/${siteConfig.contact.whatsapp}`],
 };
 
 export const metadata: Metadata = {
@@ -54,6 +59,7 @@ export default function RootLayout({
   return (
     <html lang="id" className={`${geistSans.variable} h-full antialiased`} suppressHydrationWarning>
       <body className="min-h-full flex flex-col">
+        <GoogleAnalytics gaId={siteConfig.analytics.gaId} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

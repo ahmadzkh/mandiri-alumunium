@@ -9,18 +9,15 @@ export const siteConfig: SiteConfig = {
     businessType: "Perorangan",
   },
   contact: {
-    // PRE-LAUNCH BLOCKER: nomor WhatsApp resmi belum tersedia.
-    // Ganti dengan nomor resmi sebelum production launch.
-    whatsapp: null,
-    // PRE-LAUNCH BLOCKER: Google Maps URL belum tersedia.
-    mapsUrl: null,
-    phone: null,
-    email: null,
+    whatsapp: "6285311127515",
+    mapsUrl: "https://maps.app.goo.gl/akqgUB31zAvinnDC8",
+    phone: "6285311127515",
+    email: "ekomandirialumunium@gmail.com",
   },
   primaryAreas: ["Bekasi", "Jakarta"],
   serviceArea: "JABODETABEK",
   analytics: {
-    gaId: null,
+    gaId: "G-P0K776BPDV",
     vercelAnalytics: true,
   },
   seo: {

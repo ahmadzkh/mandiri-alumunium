@@ -6,7 +6,7 @@ import { Footer } from "@/components/layout/footer";
 import { MobileCtaBar } from "@/components/layout/mobile-cta-bar";
 import { siteConfig } from "@/data/site-config";
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
-import { Analytics } from "@vercel/analytics/react";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

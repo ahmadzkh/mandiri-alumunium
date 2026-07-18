@@ -13,9 +13,9 @@ export function ServiceGrid() {
           </p>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {services.map((s) => (
-            <Link key={s.slug} href={`/layanan/${s.slug}`}>
-              <Card className="h-full transition-colors hover:bg-muted/50">
+          {services.map((s, i) => (
+            <Link key={s.slug} href={`/layanan/${s.slug}`} className={`animate-fade-in-up delay-${Math.min(i + 1, 5)}`}>
+              <Card className="card-hover h-full">
                 <CardHeader>
                   <CardTitle className="text-base">{s.name}</CardTitle>
                 </CardHeader>

@@ -18,7 +18,7 @@ export function PortfolioPreview() {
             Portfolio foto asli akan ditambahkan setelah dokumentasi proyek tersedia.
           </p>
           <Link href="/portfolio" className="mt-4">
-            <Button variant="outline">Lihat Portfolio</Button>
+            <Button variant="outline" className="btn-hover">Lihat Portfolio</Button>
           </Link>
         </div>
 
@@ -29,7 +29,7 @@ export function PortfolioPreview() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Button>Konsultasi via WhatsApp</Button>
+              <Button className="btn-hover">Konsultasi via WhatsApp</Button>
             </a>
           ) : (
             <Link href="/kontak">

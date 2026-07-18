@@ -28,7 +28,7 @@ export function Header() {
   return (
     <header role="banner" className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
-        <Link href="/" className="font-heading text-lg font-semibold tracking-tight">
+        <Link href="/" className="nav-link font-heading text-lg font-semibold tracking-tight">
           Mandiri<span className="text-primary">Alumunium</span>
         </Link>
 
@@ -38,18 +38,18 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              className="nav-link text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
             >
               {item.label}
             </Link>
           ))}
           <WhatsAppLink
             label="Konsultasi"
-            className="inline-flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/80"
+            className="btn-hover inline-flex h-9 items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground hover:bg-primary/80"
           />
         </nav>
 
-        {/* Mobile menu */}
+        {/* Mobile menu — left side overlay */}
         <Sheet open={open} onOpenChange={setOpen}>
           <SheetTrigger render={<Button variant="ghost" size="icon" className="md:hidden" aria-label="Menu navigasi">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -58,15 +58,15 @@ export function Header() {
                 <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
             </Button>} />
-          <SheetContent side="right" className="w-72">
-              <SheetTitle>Menu Navigasi</SheetTitle>
+          <SheetContent side="left" className="w-72 animate-fade-in-up">
+            <SheetTitle className="text-xl font-bold">Menu Navigasi</SheetTitle>
             <div className="flex flex-col gap-4 mt-8">
-              {navItems.map((item) => (
+              {navItems.map((item, i) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className="text-base font-medium text-foreground transition-colors hover:text-primary"
+                  className={`text-base font-medium text-foreground transition-colors hover:text-primary animate-fade-in-up delay-${Math.min(i + 1, 5)}`}
                 >
                   {item.label}
                 </Link>
@@ -74,7 +74,7 @@ export function Header() {
               <Separator className="my-2" />
               <WhatsAppLink
                 label="Konsultasi via WhatsApp"
-                className="inline-flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground"
+                className="btn-hover inline-flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground"
               />
             </div>
           </SheetContent>

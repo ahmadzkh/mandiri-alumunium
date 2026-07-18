@@ -19,6 +19,7 @@ export default function ContactPage() {
         </p>
 
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
+          {/* WhatsApp */}
           <div className="rounded-xl border bg-card p-6">
             <h2 className="text-sm font-semibold">WhatsApp</h2>
             <p className="mt-1 text-sm text-muted-foreground">
@@ -42,13 +43,14 @@ export default function ContactPage() {
                 rel="noopener noreferrer"
                 className="mt-3 inline-block"
               >
-                <Button size="sm">Konsultasi via WhatsApp</Button>
+                <Button size="sm" className="btn-hover">Konsultasi via WhatsApp</Button>
               </a>
             ) : (
               <p className="mt-2 text-xs text-muted-foreground">Nomor WhatsApp akan diumumkan.</p>
             )}
           </div>
 
+          {/* Area Layanan */}
           <div className="rounded-xl border bg-card p-6">
             <h2 className="text-sm font-semibold">Area Layanan</h2>
             <ul className="mt-2 space-y-1">
@@ -62,6 +64,7 @@ export default function ContactPage() {
             </ul>
           </div>
 
+          {/* Google Maps — link + embed */}
           <div className="rounded-xl border bg-card p-6 sm:col-span-2">
             <h2 className="text-sm font-semibold">Google Maps</h2>
             <p className="mt-1 text-sm text-muted-foreground">
@@ -78,6 +81,21 @@ export default function ContactPage() {
                 "Link Google Maps akan tersedia setelah profil bisnis diaktifkan."
               )}
             </p>
+            {siteConfig.contact.mapsUrl && (
+              <div className="mt-4 overflow-hidden rounded-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2396.6800017979285!2d106.99016261239636!3d-6.141633190972329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698bcf73dc213f%3A0xdaacbcba78efdc20!2sMANDIRI%20ALUMUNIUM!5e1!3m2!1sid!2sid!4v1784390966879!5m2!1sid!2sid"
+                  width="100%"
+                  height="320"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title="Lokasi Mandiri Alumunium di Google Maps"
+                  className="rounded-lg"
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>

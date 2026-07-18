@@ -26,7 +26,7 @@ export function HeroSection() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Button size="lg">Konsultasi via WhatsApp</Button>
+                <Button size="lg" className="btn-hover">Konsultasi via WhatsApp</Button>
               </a>
             ) : (
               <Link href="/kontak">
@@ -34,7 +34,7 @@ export function HeroSection() {
               </Link>
             )}
             <Link href="/portfolio">
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="btn-hover">
                 Lihat Portfolio
               </Button>
             </Link>
@@ -42,20 +42,28 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Service preview */}
+      {/* Service preview — 3 unggulan + link ke semua layanan */}
       <div className="mx-auto max-w-6xl px-5 pb-12 md:px-8">
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {services
             .filter((s) => s.category === "unggulan")
-            .slice(0, 4)
-            .map((s) => (
-              <Link key={s.slug} href={`/layanan/${s.slug}`}>
-                <Card className="p-4 transition-colors hover:bg-muted/50">
+            .slice(0, 3)
+            .map((s, i) => (
+              <Link key={s.slug} href={`/layanan/${s.slug}`} className={`animate-fade-in-up delay-${Math.min(i + 1, 5)}`}>
+                <Card className="card-hover p-4">
                   <h3 className="text-sm font-semibold">{s.name}</h3>
                   <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{s.summary}</p>
                 </Card>
               </Link>
             ))}
+          {/* Card ke-4: link ke semua layanan */}
+          <Link href="/layanan" className="animate-fade-in-up delay-4">
+            <Card className="card-hover flex h-full items-center justify-center p-4 border-dashed border-muted-foreground/40">
+              <span className="text-sm font-medium text-primary">
+                Lihat Semua Layanan &rarr;
+              </span>
+            </Card>
+          </Link>
         </div>
       </div>
     </section>

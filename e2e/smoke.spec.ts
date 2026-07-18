@@ -65,7 +65,7 @@ test.describe("SEO assets", () => {
 })
 
 test.describe("CTA behavior", () => {
-  test("WhatsApp links conditionally render", async ({ page, request }) => {
+  test("WhatsApp links conditionally render", async ({ page }) => {
     // Cek apakah whatsapp dikonfigurasi via data endpoint internal
     const hasWhatsApp = await page.evaluate(async () => {
       const mod = await import("@/data/site-config")

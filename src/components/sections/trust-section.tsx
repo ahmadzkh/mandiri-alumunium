@@ -8,8 +8,8 @@ export function TrustSection() {
             <p className="mt-1 text-sm text-muted-foreground">Berdiri sejak</p>
           </div>
           <div className="rounded-xl border bg-card p-6">
-            <p className="text-3xl font-bold text-primary">15+</p>
-            <p className="mt-1 text-sm text-muted-foreground">Tahun pengalaman owner</p>
+            <p className="text-3xl font-bold text-primary">20+</p>
+            <p className="mt-1 text-sm text-muted-foreground">Tahun pengalaman di bidang aluminium</p>
           </div>
           <div className="rounded-xl border bg-card p-6">
             <p className="text-3xl font-bold text-primary">JABODETABEK</p>

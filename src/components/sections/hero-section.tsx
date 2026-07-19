@@ -14,11 +14,11 @@ function HeroBackground() {
         src="/images/og/Product-hero.png"
         alt=""
         fill
-        className="object-cover"
+        className="object-cover blur-sm"
         priority
       />
       {/* Overlay gradasi linier: kiri tembus pandang, kanan lebih solid */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-background/30 to-background/50" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-background/40 to-background/70" />
     </div>
   )
 }

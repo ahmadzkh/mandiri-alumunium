@@ -18,7 +18,7 @@ function HeroBackground() {
         priority
       />
       {/* Overlay gradasi linier: kiri tembus pandang, kanan lebih solid */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-background/45 to-background/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-background/30 to-background/50" />
     </div>
   )
 }
@@ -49,7 +49,7 @@ export function HeroSection() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
-            className="mt-4 max-w-lg text-base leading-relaxed text-muted-foreground md:text-lg"
+            className="mt-4 max-w-lg text-base leading-relaxed text-foreground/90 md:text-lg"
           >
             Solusi Profesional untuk Fabrikasi, Pemasangan, dan Perbaikan Aluminium &amp; Kaca. Melayani kebutuhan rumah, toko, kantor, hingga proyek komersial di Bekasi, Jakarta, dan JABODETABEK dengan pengalaman lebih dari 15 tahun, material berkualitas, serta pengerjaan yang rapi dan presisi.
           </motion.p>

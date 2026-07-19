@@ -71,7 +71,7 @@ export function HeroSection() {
             transition={{ duration: 0.5, delay: 0.6, ease: "easeOut" }}
             className="mt-4 max-w-lg text-base leading-relaxed text-foreground/90 md:text-lg"
           >
-            Solusi Profesional untuk Fabrikasi, Pemasangan, dan Perbaikan Aluminium &amp; Kaca. Melayani kebutuhan rumah, toko, kantor, hingga proyek komersial di Bekasi, Jakarta, dan JABODETABEK dengan pengalaman lebih dari 15 tahun, material berkualitas, serta pengerjaan yang rapi dan presisi.
+            Solusi Profesional untuk Fabrikasi, Pemasangan, dan Perbaikan Aluminium &amp; Kaca. Melayani kebutuhan rumah, toko, kantor, hingga proyek komersial di Bekasi, Jakarta, dan JABODETABEK dengan pengalaman lebih dari 20 tahun, material berkualitas, serta pengerjaan yang rapi dan presisi.
           </motion.p>
 
           <motion.div

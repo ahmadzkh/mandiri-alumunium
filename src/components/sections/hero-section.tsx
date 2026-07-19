@@ -17,8 +17,8 @@ function HeroBackground() {
         className="object-cover"
         priority
       />
-      {/* Overlay gradasi agar teks tetap terbaca */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/85 via-background/50 to-background/85" />
+      {/* Overlay gradasi linier: kiri tembus pandang, kanan lebih solid */}
+      <div className="absolute inset-0 bg-gradient-to-r from-background/30 via-background/45 to-background/60" />
     </div>
   )
 }

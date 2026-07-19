@@ -7,40 +7,55 @@ import { siteConfig } from "@/data/site-config"
 import { portfolioItems } from "@/data/portfolio"
 import { Badge } from "@/components/ui/badge"
 import { SkeletonShimmer } from "@/components/ui/skeleton-shimmer"
+import { ImageLightbox } from "@/components/ui/image-lightbox"
 import { useState } from "react"
 
 function PortfolioCard({ item }: { item: (typeof portfolioItems)[number] }) {
   const [loaded, setLoaded] = useState(false)
+  const [lightboxOpen, setLightboxOpen] = useState(false)
 
   return (
-    <Link
-      href={`/portfolio#${item.slug}`}
-      className="group overflow-hidden rounded-xl border bg-card card-hover"
-    >
-      <SkeletonShimmer loaded={loaded}>
-        <div className="aspect-[4/3] overflow-hidden bg-muted">
-          {item.images[0] && (
-            <Image
-              src={item.images[0]}
-              alt={item.alt}
-              width={600}
-              height={450}
-              className="h-full w-full object-cover transition-all duration-500 group-hover:scale-125"
-              onLoad={() => setLoaded(true)}
-            />
-          )}
-        </div>
-        <div className="p-4">
-          <div className="flex flex-wrap gap-1.5 mb-2">
-            <Badge variant="secondary" className="text-[10px] px-1.5 py-0">{item.badge.category}</Badge>
-            <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.services.join(", ")}</Badge>
-            <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.location}</Badge>
+    <>
+      <div className="overflow-hidden rounded-xl border bg-card card-hover">
+        <SkeletonShimmer loaded={loaded}>
+          <button
+            onClick={() => setLightboxOpen(true)}
+            className="block w-full text-left"
+          >
+            <div className="aspect-[4/3] overflow-hidden bg-muted">
+              {item.images[0] && (
+                <Image
+                  src={item.images[0]}
+                  alt={item.alt}
+                  width={600}
+                  height={450}
+                  className="h-full w-full object-cover cursor-pointer"
+                  onLoad={() => setLoaded(true)}
+                />
+              )}
+            </div>
+          </button>
+          <div className="p-4">
+            <div className="flex flex-wrap gap-1.5 mb-2">
+              <Badge variant="secondary" className="text-[10px] px-1.5 py-0">{item.badge.category}</Badge>
+              <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.services.join(", ")}</Badge>
+              <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.location}</Badge>
+            </div>
+            <p className="text-sm font-semibold">{item.title}</p>
+            <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{item.summary}</p>
           </div>
-          <p className="text-sm font-semibold">{item.title}</p>
-          <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{item.summary}</p>
-        </div>
-      </SkeletonShimmer>
-    </Link>
+        </SkeletonShimmer>
+      </div>
+
+      {item.images[0] && (
+        <ImageLightbox
+          src={item.images[0]}
+          alt={item.alt}
+          open={lightboxOpen}
+          onClose={() => setLightboxOpen(false)}
+        />
+      )}
+    </>
   )
 }
 

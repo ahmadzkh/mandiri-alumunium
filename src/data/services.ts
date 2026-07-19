@@ -16,7 +16,7 @@ export const services: Service[] = [
     category: "unggulan",
     summary: "Fabrikasi aluminium custom untuk rumah, toko, kantor, dan proyek. Semua profil dipotong dan dirakit presisi.",
     description:
-      "Mandiri Alumunium melayani fabrikasi aluminium untuk berbagai kebutuhan. Dengan pengalaman owner 15+ tahun sejak 2015, setiap pesanan dikerjakan dengan presisi tinggi menggunakan material berkualitas. Cocok untuk proyek residensial, komersial, dan industrial di Bekasi, Jakarta, dan JABODETABEK.",
+      "Mandiri Alumunium melayani fabrikasi aluminium untuk berbagai kebutuhan. Dengan pengalaman owner 20+ tahun sejak 2018, setiap pesanan dikerjakan dengan presisi tinggi menggunakan material berkualitas. Cocok untuk proyek residensial, komersial, dan industrial di Bekasi, Jakarta, dan JABODETABEK.",
     useCases: ["Pintu aluminium custom", "Jendela aluminium", "Kusen aluminium", "Partisi ruang", "Etalase toko"],
     ctaMessage: "Halo Mandiri Alumunium, saya ingin konsultasi fabrikasi aluminium.",
     order: 1,

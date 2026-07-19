@@ -14,7 +14,7 @@ export function Footer() {
               Mandiri<span className="text-primary">Alumunium</span>
             </Link>
             <p className="text-sm text-muted-foreground leading-relaxed max-w-xs">
-              Jasa fabrikasi, pemasangan, dan service aluminium untuk rumah, toko, kantor, dan proyek sejak 2015.
+              Jasa fabrikasi, pemasangan, dan service aluminium untuk rumah, toko, kantor, dan proyek sejak 2018.
             </p>
             <p className="text-xs text-muted-foreground">
               Owner: {siteConfig.business.owner} &middot; {siteConfig.business.ownerExperience} pengalaman

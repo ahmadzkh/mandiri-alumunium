@@ -113,19 +113,19 @@ export const portfolioItems: PortfolioItem[] = [
     order: 5,
   },
   {
-    slug: "etalase-toko-aluminium-bronze",
-    title: "Etalase Toko Aluminium Bronze",
+    slug: "kusen-pintu-partisi-coklat",
+    title: "Kusen Pintu & Partisi Aluminium Coklat",
     summary:
-      "Pembuatan etalase toko dengan kusen aluminium warna bronze dan kaca bening untuk tampilan display yang optimal dan profesional.",
+      "Pembuatan kusen pintu dan partisi aluminium warna coklat untuk ruang toko dengan tampilan display yang optimal dan profesional.",
     description:
-      "Proyek pengerjaan etalase toko menggunakan kusen aluminium warna coklat bronze dengan kaca bening ukuran besar. Terdapat satu pintu swing di bagian tengah untuk akses masuk. Desain floor-to-ceiling memberikan visibilitas maksimal terhadap barang display. Seluruh proses fabrikasi dan pemasangan dikerjakan sesuai ukuran toko.",
+      "Proyek pengerjaan kusen pintu dan partisi aluminium warna coklat bronze untuk toko di Bekasi. Menggunakan kaca bening ukuran besar dengan sistem pintu swing di bagian tengah untuk akses masuk. Desain floor-to-ceiling memberikan visibilitas maksimal terhadap barang display. Seluruh proses fabrikasi dan pemasangan dikerjakan sesuai ukuran bangunan.",
     badge: {
       category: "Toko",
       services: ["Fabrikasi", "Pemasangan"],
       materials: ["Aluminium", "Kaca"],
       location: "Bekasi",
     },
-    alt: "Etalase toko aluminium bronze dengan kaca bening untuk display toko di Bekasi",
+    alt: "Kusen pintu dan partisi aluminium coklat bronze untuk toko di Bekasi",
     featured: false,
     isOriginalPhoto: true,
     images: ["/images/portfolio/proyek-6.jpeg"],

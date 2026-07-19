@@ -23,6 +23,8 @@ export interface TextTypeProps {
   onSentenceComplete?: (sentence: string, index: number) => void;
   startOnVisible?: boolean;
   reverseMode?: boolean;
+  highlightText?: string;
+  highlightClass?: string;
   [key: string]: any;
 }
 
@@ -45,6 +47,8 @@ export const TextType = ({
   onSentenceComplete,
   startOnVisible = false,
   reverseMode = false,
+  highlightText,
+  highlightClass,
   ...props
 }: TextTypeProps) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -172,6 +176,25 @@ export const TextType = ({
   const shouldHideCursor =
     hideCursorWhileTyping && (currentCharIndex < textArray[currentTextIndex].length || isDeleting);
 
+  const renderDisplayedText = () => {
+    if (!highlightText) return displayedText;
+    const currentFullText = textArray[currentTextIndex];
+    const index = currentFullText.indexOf(highlightText);
+    if (index === -1) return displayedText;
+
+    const beforeHighlight = displayedText.slice(0, index);
+    const inHighlight = displayedText.slice(index, index + highlightText.length);
+    const afterHighlight = displayedText.slice(index + highlightText.length);
+
+    return (
+      <>
+        {beforeHighlight}
+        {inHighlight && <span className={highlightClass}>{inHighlight}</span>}
+        {afterHighlight}
+      </>
+    );
+  };
+
   return createElement(
     Component,
     {
@@ -180,7 +203,7 @@ export const TextType = ({
       ...props
     },
     <span className="text-type__content" style={{ color: getCurrentTextColor() || 'inherit' }}>
-      {displayedText}
+      {renderDisplayedText()}
     </span>,
     showCursor && (
       <span

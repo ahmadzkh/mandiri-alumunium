@@ -40,17 +40,21 @@ export function HeroSection() {
             Bekasi &middot; Jakarta &middot; {siteConfig.serviceArea}
           </motion.p>
 
-          <TextType
-            text="Fabrikasi & Pemasangan Aluminium"
-            as="h1"
-            typingSpeed={80}
-            deletingSpeed={35}
-            pauseDuration={3000}
-            loop
-            showCursor={true}
-            cursorCharacter="▎"
-            className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1] text-primary"
-          />
+          <div className="min-h-[90px] md:min-h-[132px]">
+            <TextType
+              text="Fabrikasi & Pemasangan Aluminium"
+              as="h1"
+              typingSpeed={80}
+              deletingSpeed={35}
+              pauseDuration={3000}
+              loop
+              showCursor={true}
+              cursorCharacter="▎"
+              highlightText="Aluminium"
+              highlightClass="text-blue-700"
+              className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1] text-foreground drop-shadow-md"
+            />
+          </div>
 
           <motion.p
             initial={{ opacity: 0, y: 16 }}

@@ -40,20 +40,29 @@ export function HeroSection() {
             Bekasi &middot; Jakarta &middot; {siteConfig.serviceArea}
           </motion.p>
 
-          <div className="min-h-[90px] md:min-h-[132px]">
-            <TextType
-              text="Fabrikasi & Pemasangan Aluminium"
-              as="h1"
-              typingSpeed={80}
-              deletingSpeed={35}
-              pauseDuration={3000}
-              loop
-              showCursor={true}
-              cursorCharacter="▎"
-              highlightText="Aluminium"
-              highlightClass="text-blue-700"
-              className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1] text-foreground drop-shadow-md"
-            />
+          <div className="relative">
+            {/* Teks statis tersembunyi untuk mereservasi ruang agar tinggi tidak melompat */}
+            <h1 
+              aria-hidden="true" 
+              className="invisible pointer-events-none select-none text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]"
+            >
+              Fabrikasi & Pemasangan Aluminium
+            </h1>
+            <div className="absolute inset-0">
+              <TextType
+                text="Fabrikasi & Pemasangan Aluminium"
+                as="h1"
+                typingSpeed={80}
+                deletingSpeed={35}
+                pauseDuration={3000}
+                loop
+                showCursor={true}
+                cursorCharacter="▎"
+                highlightText="Aluminium"
+                highlightClass="text-blue-700"
+                className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1] text-foreground drop-shadow-md"
+              />
+            </div>
           </div>
 
           <motion.p

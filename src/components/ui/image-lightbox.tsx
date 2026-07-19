@@ -33,7 +33,7 @@ export function ImageLightbox({ src, alt, open, onClose }: ImageLightboxProps) {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{ duration: 0.2 }}
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/80 backdrop-blur-md p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-background/50 backdrop-blur-md p-4"
           onClick={onClose}
         >
           <motion.div

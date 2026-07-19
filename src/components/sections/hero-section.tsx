@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { motion } from "motion/react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/site-config"
@@ -9,6 +10,18 @@ import { AnimatedTitle } from "@/components/ui/animated-title"
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden border-b">
+      {/* Background image */}
+      <div className="absolute inset-0 -z-10">
+        <Image
+          src="/images/og/tampak-toko.jpg"
+          alt="Tampak depan Mandiri Alumunium"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-background/80" />
+      </div>
+
       <div className="mx-auto max-w-6xl px-5 py-20 md:py-28 md:px-8">
         <div className="max-w-2xl">
           <motion.p

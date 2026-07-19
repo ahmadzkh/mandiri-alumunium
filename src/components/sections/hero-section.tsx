@@ -47,8 +47,9 @@ export function HeroSection() {
             deletingSpeed={35}
             pauseDuration={3000}
             loop
-            showCursor={false}
-            className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]"
+            showCursor={true}
+            cursorCharacter="▎"
+            className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1] text-primary"
           />
 
           <motion.p

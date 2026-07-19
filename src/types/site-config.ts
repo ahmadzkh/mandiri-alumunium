@@ -4,8 +4,8 @@ export const siteConfigSchema = z.object({
   business: z.object({
     name: z.literal("Mandiri Alumunium"),
     owner: z.literal("Eko Sabari"),
-    establishedYear: z.literal(2015),
-    ownerExperience: z.literal("15+ tahun"),
+    establishedYear: z.literal(2018),
+    ownerExperience: z.literal("20+ tahun"),
     businessType: z.literal("Perorangan"),
   }),
   contact: z.object({

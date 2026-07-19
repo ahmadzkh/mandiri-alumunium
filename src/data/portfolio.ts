@@ -36,4 +36,23 @@ export const portfolioItems: PortfolioItem[] = [
     images: ["/images/portfolio/proyek-1.jpeg"],
     order: 1,
   },
+  {
+    slug: "kusen-pintu-kaca-rtuko-minimalis",
+    title: "Kusen & Pintu Kaca Ruko Minimalis",
+    summary:
+      "Pembuatan kusen aluminium dan pintu kaca sliding untuk ruko dua lantai bergaya minimalis modern dengan hasil pemasangan yang presisi dan rapi.",
+    description:
+      "Proyek pengerjaan kusen aluminium hitam dan pintu geser kaca untuk bangunan ruko dua lantai di Bekasi. Menggunakan rangka aluminium warna hitam dengan kaca bening untuk tampilan modern dan pencahayaan optimal. Seluruh proses dilakukan mulai dari pengukuran, fabrikasi, hingga pemasangan sesuai ukuran bangunan.",
+    badge: {
+      category: "Ruko",
+      services: ["Fabrikasi", "Pemasangan"],
+      materials: ["Aluminium", "Kaca"],
+      location: "Bekasi",
+    },
+    alt: "Kusen aluminium hitam dan pintu kaca sliding untuk ruko dua lantai di Bekasi",
+    featured: false,
+    isOriginalPhoto: true,
+    images: ["/images/portfolio/proyek-2.jpeg"],
+    order: 2,
+  },
 ]

@@ -6,6 +6,7 @@ import { motion } from "motion/react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/site-config"
 import { AnimatedTitle } from "@/components/ui/animated-title"
+import { TextType } from "@/components/ui/text-type"
 
 function HeroBackground() {
   return (
@@ -39,9 +40,14 @@ export function HeroSection() {
             Bekasi &middot; Jakarta &middot; {siteConfig.serviceArea}
           </motion.p>
 
-          <AnimatedTitle
+          <TextType
             text="Fabrikasi & Pemasangan Aluminium"
-            highlight="Aluminium"
+            as="h1"
+            typingSpeed={80}
+            deletingSpeed={35}
+            pauseDuration={3000}
+            loop
+            showCursor={false}
             className="text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]"
           />
 

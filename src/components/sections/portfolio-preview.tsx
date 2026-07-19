@@ -3,6 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/data/site-config"
 import { portfolioItems } from "@/data/portfolio"
+import { Badge } from "@/components/ui/badge"
 
 export function PortfolioPreview() {
   const items = portfolioItems.slice(0, 3)
@@ -27,7 +28,7 @@ export function PortfolioPreview() {
             </Link>
           </div>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {items.map((item) => (
               <Link
                 key={item.slug}
@@ -46,10 +47,13 @@ export function PortfolioPreview() {
                   )}
                 </div>
                 <div className="p-4">
-                  <p className="text-sm font-medium">{item.title}</p>
-                  {item.location && (
-                    <p className="mt-1 text-xs text-muted-foreground">{item.location}</p>
-                  )}
+                  <div className="flex flex-wrap gap-1.5 mb-2">
+                    <Badge variant="secondary" className="text-[10px] px-1.5 py-0">{item.badge.category}</Badge>
+                    <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.service}</Badge>
+                    <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.location}</Badge>
+                  </div>
+                  <p className="text-sm font-semibold">{item.title}</p>
+                  <p className="mt-1 text-xs text-muted-foreground line-clamp-2">{item.summary}</p>
                 </div>
               </Link>
             ))}

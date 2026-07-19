@@ -3,6 +3,7 @@ import Image from "next/image"
 import { siteConfig } from "@/data/site-config"
 import { portfolioItems } from "@/data/portfolio"
 import { Button } from "@/components/ui/button"
+import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 
 export const metadata: Metadata = {
@@ -57,11 +58,13 @@ export default function PortfolioPage() {
                     )}
                   </div>
                   <div className="p-4">
+                    <div className="flex flex-wrap gap-1.5 mb-2">
+                      <Badge variant="secondary" className="text-[10px] px-1.5 py-0">{item.badge.category}</Badge>
+                      <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.service}</Badge>
+                      <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.location}</Badge>
+                    </div>
                     <h2 className="text-base font-semibold">{item.title}</h2>
-                    {item.location && (
-                      <p className="mt-1 text-xs text-muted-foreground">{item.category} &middot; {item.location}</p>
-                    )}
-                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{item.summary}</p>
                   </div>
                 </div>
               </section>

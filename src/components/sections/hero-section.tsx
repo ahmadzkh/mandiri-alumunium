@@ -13,7 +13,7 @@ export function HeroSection() {
       {/* Background image */}
       <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/og/tampak-toko.jpg"
+          src="/images/og/tampak-toko.png"
           alt="Tampak depan Mandiri Alumunium"
           fill
           className="object-cover"

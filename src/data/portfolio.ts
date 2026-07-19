@@ -1,13 +1,16 @@
 export interface PortfolioItem {
   slug: string
   title: string
+  summary: string
+  description: string
   badge: {
     category: string
-    service: string
+    services: string[]
+    materials: string[]
     location: string
   }
-  summary: string
   alt: string
+  featured: boolean
   isOriginalPhoto: true
   images: string[]
   order: number
@@ -15,16 +18,20 @@ export interface PortfolioItem {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    slug: "pintu-aluminium-motif-kayu",
-    title: "Pintu Aluminium Motif Kayu",
+    slug: "pintu-jendela-aluminium-custom",
+    title: "Pintu & Jendela Aluminium Custom",
+    summary:
+      "Pembuatan pintu, kusen, dan jendela aluminium custom untuk rumah bergaya minimalis modern dengan hasil pemasangan yang rapi dan presisi.",
+    description:
+      "Proyek pengerjaan pintu, kusen, dan jendela aluminium custom pada rumah tinggal bergaya minimalis modern di Bekasi. Menggunakan aluminium warna hitam yang dipadukan dengan panel motif kayu untuk memberikan tampilan modern sekaligus fungsional. Seluruh proses dilakukan mulai dari pengukuran, fabrikasi, hingga pemasangan sesuai ukuran bangunan.",
     badge: {
       category: "Rumah Tinggal",
-      service: "Fabrikasi & Pemasangan",
+      services: ["Fabrikasi", "Pemasangan"],
+      materials: ["Aluminium", "Kaca", "Panel Motif Kayu"],
       location: "Bekasi",
     },
-    summary:
-      "Pembuatan pintu dan jendela aluminium untuk rumah tinggal menggunakan bahan aluminium berkualitas dengan desain motif kayu dan warna hitam minimalis. Seluruh proses dikerjakan sesuai ukuran dan kebutuhan pelanggan sehingga menghasilkan pemasangan yang rapi, presisi, dan fungsional.",
-    alt: "Pintu aluminium motif kayu dan jendela aluminium warna hitam di Bekasi",
+    alt: "Pintu dan jendela aluminium custom motif kayu dan warna hitam di Bekasi",
+    featured: true,
     isOriginalPhoto: true,
     images: ["/images/portfolio/proyek-1.jpeg"],
     order: 1,

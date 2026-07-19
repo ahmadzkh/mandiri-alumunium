@@ -49,7 +49,7 @@ export function PortfolioPreview() {
                 <div className="p-4">
                   <div className="flex flex-wrap gap-1.5 mb-2">
                     <Badge variant="secondary" className="text-[10px] px-1.5 py-0">{item.badge.category}</Badge>
-                    <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.service}</Badge>
+                    <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.services.join(", ")}</Badge>
                     <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.location}</Badge>
                   </div>
                   <p className="text-sm font-semibold">{item.title}</p>

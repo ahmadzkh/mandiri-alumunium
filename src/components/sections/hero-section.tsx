@@ -1,12 +1,11 @@
 "use client"
 
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "motion/react"
 import { Button } from "@/components/ui/button"
-import { siteConfig } from "@/data/site-config"
-import { AnimatedTitle } from "@/components/ui/animated-title"
 import { TextType } from "@/components/ui/text-type"
+import { siteConfig } from "@/data/site-config"
 
 function HeroBackground() {
   return (
@@ -15,11 +14,11 @@ function HeroBackground() {
         src="/images/og/Product-hero.png"
         alt=""
         fill
-        className="object-cover blur-sm"
+        className="object-cover blur-[2px]"
         priority
       />
       {/* Overlay gradasi linier: kiri tembus pandang, kanan lebih solid */}
-      <div className="absolute inset-0 bg-gradient-to-r from-background/10 via-background/40 to-background/70" />
+      <div className="absolute inset-0 bg-linear-to-r from-background/10 via-background/40 to-background/70" />
     </div>
   )
 }
@@ -41,17 +40,22 @@ export function HeroSection() {
           </motion.p>
 
           <div className="relative">
+            {/* Heading utama untuk Screen Reader */}
+            <h1 className="sr-only">
+              Fabrikasi & Pemasangan Aluminium
+            </h1>
+
             {/* Teks statis tersembunyi untuk mereservasi ruang agar tinggi tidak melompat */}
-            <h1 
+            <div 
               aria-hidden="true" 
               className="invisible pointer-events-none select-none text-4xl font-bold leading-tight tracking-tight md:text-6xl md:leading-[1.1]"
             >
               Fabrikasi & Pemasangan Aluminium
-            </h1>
-            <div className="absolute inset-0">
+            </div>
+            <div className="absolute inset-0" aria-hidden="true">
               <TextType
                 text="Fabrikasi & Pemasangan Aluminium"
-                as="h1"
+                as="div"
                 typingSpeed={80}
                 deletingSpeed={35}
                 pauseDuration={3000}

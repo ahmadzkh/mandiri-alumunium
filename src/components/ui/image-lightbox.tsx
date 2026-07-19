@@ -42,7 +42,7 @@ export function ImageLightbox({ src, alt, open, onClose }: ImageLightboxProps) {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.6, opacity: 0 }}
             transition={{ type: "spring", damping: 25, stiffness: 300 }}
-            className="relative max-h-[75vh] max-w-[75vw] overflow-hidden rounded-2xl shadow-2xl"
+            className="relative max-h-[75vh] max-w-[75vw] overflow-hidden rounded-2xl shadow-2xl shadow-black/40"
             onClick={(e) => e.stopPropagation()}
           >
             <Image

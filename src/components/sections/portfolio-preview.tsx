@@ -42,7 +42,7 @@ export function PortfolioPreview() {
                       alt={item.alt}
                       width={600}
                       height={450}
-                      className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                      className="h-full w-full object-cover transition-all duration-500 group-hover:scale-125"
                     />
                   )}
                 </div>

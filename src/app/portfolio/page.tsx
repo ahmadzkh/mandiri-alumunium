@@ -45,19 +45,30 @@ export default function PortfolioPage() {
           <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {portfolioItems.map((item) => (
               <section key={item.slug} id={item.slug} className="scroll-mt-20">
-                <div className="overflow-hidden rounded-xl border bg-card card-hover">
-                  <div className="aspect-[4/3] overflow-hidden bg-muted">
-                    {item.images[0] && (
+                <div className="group relative overflow-visible rounded-xl border bg-card card-hover">
+                  <div className="relative overflow-hidden rounded-t-xl">
+                    <div className="aspect-[4/3] overflow-hidden bg-muted">
+                      {item.images[0] && (
+                        <Image
+                          src={item.images[0]}
+                          alt={item.alt}
+                          width={600}
+                          height={450}
+                          className="h-full w-full object-cover transition-all duration-500 group-hover:scale-125"
+                        />
+                      )}
+                    </div>
+                    {/* Reveal overlay — gambar muncul penuh tanpa potongan */}
+                    <div className="absolute inset-0 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100 pointer-events-none">
                       <Image
-                        src={item.images[0]}
-                        alt={item.alt}
-                        width={600}
-                        height={450}
-                        className="h-full w-full object-cover"
+                        src={item.images[0] ?? ""}
+                        alt=""
+                        fill
+                        className="object-contain p-2"
                       />
-                    )}
+                    </div>
                   </div>
-                  <div className="p-4">
+                  <div className="p-4 relative z-20 bg-card">
                     <div className="flex flex-wrap gap-1.5 mb-2">
                       <Badge variant="secondary" className="text-[10px] px-1.5 py-0">{item.badge.category}</Badge>
                       <Badge variant="outline" className="text-[10px] px-1.5 py-0">{item.badge.services.join(", ")}</Badge>

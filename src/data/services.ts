@@ -39,7 +39,7 @@ export const services: Service[] = [
     summary: "Perbaikan, perawatan, dan penggantian komponen aluminium yang rusak atau aus.",
     description:
       "Layanan service aluminium Mandiri Alumunium mencakup perbaikan pintu dan jendela macet, penggantian engsel dan handle, perbaikan partisi, serta perawatan kusen. Cepat, rapi, dan bergaransi pekerjaan. Area Bekasi dan Jakarta.",
-    useCases: ["Pintu aluminium macet/seret", "Engsel dan handle rusak", "Kaca pecah perlu diganti", "Perawatan kusen aluminium", "Perbaikan partisi kantor"],
+    useCases: ["Pintu aluminium macet/seret", "Engsel dan handle rusak", "Kaca pecah perlu diganti", "Perbaikan partisi kantor"],
     ctaMessage: "Halo Mandiri Alumunium, saya butuh service aluminium.",
     order: 3,
   },

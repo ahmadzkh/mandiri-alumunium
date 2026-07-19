@@ -66,25 +66,25 @@ export function Header() {
                 <line x1="3" y1="18" x2="21" y2="18" />
               </svg>
             </Button>} />
-          <SheetContent side="left" className="w-72 animate-fade-in-up">
+          <SheetContent side="left" className="w-72 bg-white p-6">
             <SheetTitle className="text-xl font-bold">Menu Navigasi</SheetTitle>
-            <div className="flex flex-col gap-4 mt-8">
+            <nav className="flex flex-col gap-2 mt-6">
               {navItems.map((item, i) => (
                 <Link
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`text-base font-medium text-foreground transition-colors hover:text-primary animate-fade-in-up delay-${Math.min(i + 1, 5)}`}
+                  className={`rounded-lg px-4 py-3 text-base font-medium text-foreground transition-colors hover:bg-muted animate-fade-in-up delay-${Math.min(i + 1, 5)}`}
                 >
                   {item.label}
                 </Link>
               ))}
-              <Separator className="my-2" />
+              <Separator className="my-3" />
               <WhatsAppLink
                 label="Konsultasi via WhatsApp"
-                className="btn-hover inline-flex h-10 items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground"
+                className="btn-hover inline-flex h-11 items-center justify-center rounded-lg bg-primary px-4 text-sm font-medium text-primary-foreground"
               />
-            </div>
+            </nav>
           </SheetContent>
         </Sheet>
       </div>

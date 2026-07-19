@@ -64,6 +64,16 @@ export default function ContactPage() {
             </ul>
           </div>
 
+          {/* Jam Operasional */}
+          <div className="rounded-xl border bg-card p-6 sm:col-span-2">
+            <h2 className="text-sm font-semibold">Jam Operasional</h2>
+            {siteConfig.contact.hours.split("\n").map((line, i) => (
+              <p key={i} className="mt-1 text-sm text-muted-foreground">
+                {line}
+              </p>
+            ))}
+          </div>
+
           {/* Google Maps — link + embed */}
           <div className="rounded-xl border bg-card p-6 sm:col-span-2">
             <h2 className="text-sm font-semibold">Google Maps</h2>

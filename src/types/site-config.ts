@@ -13,6 +13,7 @@ export const siteConfigSchema = z.object({
     mapsUrl: z.string().nullable(),
     phone: z.string().nullable(),
     email: z.string().nullable(),
+    hours: z.string(),
   }),
   primaryAreas: z.tuple([z.string(), z.string()]),
   serviceArea: z.string(),

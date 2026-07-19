@@ -13,6 +13,7 @@ export const siteConfig: SiteConfig = {
     mapsUrl: "https://maps.app.goo.gl/akqgUB31zAvinnDC8",
     phone: "6285311127515",
     email: "ekomandirialumunium@gmail.com",
+    hours: "Senin\u2013Sabtu 08.00\u201317.00\nMinggu & Hari Libur: Tutup",
   },
   primaryAreas: ["Bekasi", "Jakarta"],
   serviceArea: "JABODETABEK",

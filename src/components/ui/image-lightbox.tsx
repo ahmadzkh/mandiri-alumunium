@@ -51,6 +51,8 @@ export function ImageLightbox({ src, alt, open, onClose }: ImageLightboxProps) {
               width={1200}
               height={900}
               className="h-auto w-auto max-h-[75vh] max-w-[75vw] object-contain"
+              onContextMenu={(e) => e.preventDefault()}
+              onDragStart={(e) => e.preventDefault()}
             />
             <button
               onClick={onClose}

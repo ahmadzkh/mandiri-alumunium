@@ -31,7 +31,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-5 md:px-8">
         <Link href="/" className="flex items-center gap-2 nav-link font-heading text-lg font-semibold tracking-tight">
           <Image
-            src="/images/logo/mandiri-aluminium-ori.png"
+            src="/images/logo/mandiri-aluminium-ori-icon.png"
             alt="Mandiri Alumunium"
             width={32}
             height={32}

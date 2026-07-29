@@ -24,6 +24,8 @@ function PortfolioCard({ item }: { item: (typeof portfolioItems)[number] }) {
                 width={600}
                 height={450}
                 className="h-full w-full object-cover cursor-pointer"
+                onContextMenu={(e) => e.preventDefault()}
+                onDragStart={(e) => e.preventDefault()}
               />
             )}
           </div>

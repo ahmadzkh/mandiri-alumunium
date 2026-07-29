@@ -31,6 +31,8 @@ function PortfolioCard({ item }: { item: (typeof portfolioItems)[number] }) {
                   height={450}
                   className="h-full w-full object-cover cursor-pointer"
                   onLoad={() => setLoaded(true)}
+                  onContextMenu={(e) => e.preventDefault()}
+                  onDragStart={(e) => e.preventDefault()}
                 />
               )}
             </div>

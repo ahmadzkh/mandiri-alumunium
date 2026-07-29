@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   description: siteConfig.seo.defaultDescription,
   metadataBase: new URL(siteConfig.seo.siteUrl),
   icons: {
-    icon: "/images/logo/mandiri-aluminium-profile.png",
+    icon: "/images/logo/mandiri-aluminium-ori-icon.png",
   },
   openGraph: {
     type: "website",

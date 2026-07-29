@@ -76,6 +76,13 @@
   }
 }
 
+/* ── Image protection — prevent casual copy ── */
+img {
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
 /* ── Animations ── */
 
 @keyframes fade-in-up {
